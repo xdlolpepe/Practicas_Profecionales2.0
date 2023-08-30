@@ -34,13 +34,17 @@ export const getProject = async (req, res) => {
 }
 
 export const createProject = async (req, res) => {
-    const {nombre,password} = req.body
+    const {nombre,password,apellido, dni, domicilio, genero} = req.body
 
 try {
 
     const newProject = await Projects.create({
         nombre,
-        password
+        password,
+        apellido,
+        dni,
+        domicilio,
+        genero,
     })
 
 res.json(newProject)
@@ -54,15 +58,19 @@ res.json(newProject)
 }
 
 export const updateProject = async (req, res) => {
-  
+
 try {
 
     const {id} = req.params;
-    const {nombre, password} = req.body
+    const {nombre, password,apellido, dni, domicilio, genero} = req.body
 
     const project = await Projects.findByPk(id)
     project.nombre = nombre
     project.password = password
+    project.apellido = apellido
+    project.dni = dni
+    project.domicilio = domicilio
+    project.genero = genero
 
     await project.save()
 

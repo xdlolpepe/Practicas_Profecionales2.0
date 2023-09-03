@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; // Importa las funciones 'React' y 'useState' desde sus respectivos módulos
 import axios from 'axios'; // Importa el módulo 'axios' para hacer solicitudes HTTP
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Importa una hoja de estilos CSS llamada 'App.css'
 
@@ -69,11 +70,19 @@ const App = () => {
         {/* Botón para enviar el formulario */}
       </form>
       {errorMessage && (
-        <p className="error-message">no se encuentra tu usuario</p>
-      )}{' '}
+        <div className="alert alert-danger" role="alert">
+        Error al iniciar secion: no se encuentra tu usuario
+        </div>
+       )}
+      {' '}
       {/* Muestra el mensaje de error si existe */}
-      {getOk && <p className="sucess">si esta registrado</p>}{' '}
+     {' '}
       {/* Muestra un mensaje de éxito si 'getOk' es verdadero */}
+      {getOk && (
+      <div className="alert alert-success" role="alert">
+         si esta registrado
+      </div>
+        )}
     </div>
     /* Fin del contenido del componente */
   );

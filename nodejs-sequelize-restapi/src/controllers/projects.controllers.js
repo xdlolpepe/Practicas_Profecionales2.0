@@ -41,13 +41,18 @@ export const getProject = async (req, res) => {
 //Crear projecto
 
 export const createProject = async (req, res) => {
-    const {name,password} = req.body
+    const {name, apellido, dni, direccion, password, genero} = req.body
 
 try {
 
     const newProject = await Projects.create({
         name,
+        apellido,
+        dni,
+        direccion,
         password,
+        genero,
+
     })
 
 res.json(newProject)

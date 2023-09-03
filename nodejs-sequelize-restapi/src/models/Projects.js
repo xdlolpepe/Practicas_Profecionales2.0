@@ -10,9 +10,23 @@ export const Projects = sequelize.define('projectos',{
     name: {
         type: DataTypes.STRING
     },
+    apellido:{
+        type: DataTypes.STRING
+    },
+    dni:{
+        type: DataTypes.INTEGER
+    },
+    direccion:{
+        type: DataTypes.STRING
+    },
     password: {
         type: DataTypes.INTEGER
     },
+    genero:{
+        type: DataTypes.BOOLEAN
+    },
+    
+
 
 },
 {

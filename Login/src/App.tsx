@@ -2,7 +2,6 @@ import React  from 'react';
 //importando estilos css
 import './App.css'
 //importando el archivo login
-import Login from './Login.jsx'
 import {AppRouter} from "./router/AppRouter";
 //importar bootstrap
 import 'bootstrap/dist/css/bootstrap.css';

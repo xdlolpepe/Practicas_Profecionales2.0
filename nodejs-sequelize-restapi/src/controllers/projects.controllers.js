@@ -20,10 +20,11 @@ export const getProject = async (req, res) => {
    
     try {
         
-        const {name} = req.params
+        const {name,password} = req.params
         const project = await Projects.findOne({
             where: {
                 name,
+                password
             }
         })
 

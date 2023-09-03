@@ -1,21 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import Login from './component/Login'
-import Login2 from './component/Login2'
+import Login from './Login.jsx'
+import axios from 'axios';
 
 
-function App() {
+const App = () => {
 //Estado:
+
+
 
 //JSX:
   return (
     <>
     <div>
-      <h1>Login</h1>
-      <p>Nombre</p>
       <Login></Login>
-      <p>Contraseña</p>
-      <Login2></Login2>
     </div>
     </>
   )

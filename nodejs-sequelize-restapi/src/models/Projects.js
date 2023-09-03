@@ -7,26 +7,14 @@ export const Projects = sequelize.define('projectos',{
         primaryKey: true,
         autoIncrement: true
     },
-    nombre: {
+    name: {
         type: DataTypes.STRING
     },
     password: {
         type: DataTypes.INTEGER
     },
-    apellido: {
-        type: DataTypes.CHAR
-    },
-    dni: {
-        type: DataTypes.INTEGER
-    },
-    domicilio: {
-        type: DataTypes.STRING
-    },
-    genero: {
-        type: DataTypes.BOOLEAN
-    },
 
 },
 {
-    timestamps: false
+    timestamps: true
 });

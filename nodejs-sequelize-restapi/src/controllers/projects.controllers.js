@@ -1,6 +1,8 @@
 import { Projects } from "../models/Projects.js";
 
 
+//Consultar projecto
+
 export const getProjects = async (req, res) => {
    try {
 
@@ -12,14 +14,16 @@ export const getProjects = async (req, res) => {
    }
 }
 
+//Consultar projecto 2
+
 export const getProject = async (req, res) => {
    
     try {
         
-        const {id} = req.params
+        const {name} = req.params
         const project = await Projects.findOne({
             where: {
-                id,
+                name,
             }
         })
 
@@ -33,18 +37,16 @@ export const getProject = async (req, res) => {
 
 }
 
+//Crear projecto
+
 export const createProject = async (req, res) => {
-    const {nombre,password,apellido, dni, domicilio, genero} = req.body
+    const {name,password} = req.body
 
 try {
 
     const newProject = await Projects.create({
-        nombre,
+        name,
         password,
-        apellido,
-        dni,
-        domicilio,
-        genero,
     })
 
 res.json(newProject)
@@ -57,20 +59,19 @@ res.json(newProject)
 
 }
 
+//Actualizar projecto
+
 export const updateProject = async (req, res) => {
 
 try {
 
     const {id} = req.params;
-    const {nombre, password,apellido, dni, domicilio, genero} = req.body
+    const {nombre, password } = req.body
 
     const project = await Projects.findByPk(id)
     project.nombre = nombre
     project.password = password
-    project.apellido = apellido
-    project.dni = dni
-    project.domicilio = domicilio
-    project.genero = genero
+
 
     await project.save()
 
@@ -81,6 +82,8 @@ try {
 }
 
 }
+
+//Eliminar projecto
 
 export const deleteProject = async (req, res) => {
 

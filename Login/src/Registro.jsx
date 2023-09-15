@@ -75,7 +75,7 @@ const App = () => {
         <div className="form-group">
                 <label>dni:</label>
                     <input
-                        type="number"
+                        type="text"
                         value={dni}
                         onChange={(e) => setDni(e.target.value)}
                     />

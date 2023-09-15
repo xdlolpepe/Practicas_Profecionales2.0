@@ -5,33 +5,17 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+.genero{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background-color: #b8b8b8;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
 .card {
   padding: 2em;
@@ -65,13 +49,14 @@ label {
 input {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 3px;
+  background-color: #b8b8b8;
 }
 
 button {
   background-color: #007bff;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 15px;
   border-radius: 3px;
@@ -79,7 +64,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #447ab4;
 }
 
 .error-message {
@@ -90,4 +75,8 @@ button:hover {
 .sucess{
   color: green;
   margin-top: 10px;
+}
+
+.container{
+  background-color:rgb(51, 194, 139);
 }

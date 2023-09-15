@@ -1,11 +1,11 @@
 import { Sequelize } from "sequelize";
 
 export const sequelize = new Sequelize(
-    'projectsdb',
-    'postgres',
-    '1225',
+    'db',
+    'root',
+    '13345877',
      {
         host: 'localhost',
-        dialect: 'postgres'
+        dialect: 'mysql'
      }
     );

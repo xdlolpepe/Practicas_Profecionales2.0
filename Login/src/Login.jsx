@@ -40,51 +40,47 @@ const App = () => {
 
   return (
     <div className="container">
-      {' '}
-      {/* Inicio del contenido del componente */}
-      <h2>Iniciar sesión</h2> {/* Título del formulario */}
+    
+
+      <h2>Iniciar sesión</h2>
       <form onSubmit={handleSubmit}>
-        {' '}
-        {/* Formulario que se envía cuando se hace clic en el botón */}
-        <div className="form-group">
-          {' '}
-          {/* Grupo de entrada para el nombre de usuario */}
-          <label>Usuario:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setUser(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          {' '}
-          {/* Grupo de entrada para la contraseña */}
-          <label>Contraseña:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Iniciar sesión</button>{' '}
-        {/* Botón para enviar el formulario */}
+                  <div className="form-group">
+                      <label>Usuario:</label>
+                            <input
+                              type="text"
+                              value={name}
+                              onChange={(e) => setUser(e.target.value)}
+                            />
+                  </div>
+
+                  <div className="form-group">
+                
+                    <label>Contraseña:</label>
+                            <input
+                              type="password"
+                              value={password}
+                              onChange={(e) => setPassword(e.target.value)}
+                            />
+                  </div>
+
+        <button type="submit">Iniciar sesión</button>
+
       </form>
-      {errorMessage && (
-        <div className="alert alert-danger" role="alert">
-        Error al iniciar secion: no se encuentra tu usuario
-        </div>
-       )}
-      {' '}
-      {/* Muestra el mensaje de error si existe */}
-     {' '}
-      {/* Muestra un mensaje de éxito si 'getOk' es verdadero */}
-      {getOk && (
-      <div className="alert alert-success" role="alert">
-         si esta registrado
-      </div>
-        )}
+
+            {errorMessage && (
+                  <div className="alert alert-danger" role="alert">
+                  Error al iniciar secion: no se encuentra tu usuario
+                  </div>
+            )}
+     
+
+            {getOk && (
+                  <div className="alert alert-success" role="alert">
+                    si esta registrado
+                  </div>
+              )}
     </div>
-    /* Fin del contenido del componente */
+    
   );
 };
 
